@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route programming | Logistics Company</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        
+        /* Header Section */
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header img {
+            height: 100%;
+            width: 20%;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: #000000;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s; 
+        }
+
+        nav ul li a:hover {
+            color: #5551FF;
+        }
+
+        /* Title Section */
+
+        .title {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        hr {
+            margin-top: 10px;
+            color: #E6E6E6;
+            opacity: .7;
+        }
+
+        /* Main Section */
+
+        .container {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background: #ff0;
+            background: rgba(105, 155, 247, 0.2);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        #row2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #row2 .route-programming-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 50%;
+            margin-bottom: 20px;
+            border-right: 5px solid rgba(105, 155, 247, .2);
+        }
+
+        #row2 > .route-programming-image img {
+            height: 25em;
+            width: 30em;
+        }
+
+        main form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            width: 50%;
+        }
+
+        main label {
+            width: 50%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        main input[type="text"] {
+            width: 75%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        main button[type="submit"] {
+            width: 75%;
+            padding: 10px;
+            background-color: #5551FF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        main button[type="submit"]:hover {
+            background-color: #333199;
+        }
+
+        /* About Section */
+
+        .microservice {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 10px 20px;
+            width: 100%;
+        }
+
+        .microservice-content {
+            flex: 1;
+            padding-right: 40px;
+            padding-left: 50px;
+            margin-right: 50px;
+            width: 100%;
+        }
+        
+        .microservice-content h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .microservice-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .microservice-content ul{
+            font-size: 18px;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', path='logo.png') }}" alt="Logistics Company Logo">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li> 
+                <li><a id="services" href="/services">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="title">
+            <h1>Route Programming</h1>
+            <hr>
+        </div>
+        <div class="container">
+            <section class="microservice">
+                <div class="microservice-content">
+                    <h2>Revolutionize Your Operations with Our Cutting-Edge Routing Programming Service!</h2>
+                    <p>Feeling swamped by the complexity of route planning for your deliveries? Our state-of-the-art Routing Programming Service is designed to streamline your operations. Discover the pinnacle of route optimization with our forward-thinking technology. Here's why our service is a game-changer: </p>
+                    <ul>
+                        <li>Intuitive Interface: Seamlessly integrate our service with your current systems for a hassle-free upgrade and instant operational improvements.</li>
+                        <li>Dynamic Route Optimization: Enjoy the clarity of real-time routing adjustments, ensuring optimal efficiency and punctuality for every delivery.</li>
+                        <li>Advanced Analytics: Leverage our sophisticated algorithms to forecast potential disruptions and proactively refine your routing strategies.
+                        </li>
+                        <li>Superior Customer Satisfaction: Offer your clients precise delivery windows and live updates, elevating their experience and loyalty.</li>
+                        <li>Operational Superiority: Minimize human error, conserve valuable resources, and decrease expenses with our automated routing solutions.</li>
+                    </ul>  
+
+                    <p> Transition to our Routing Programming Service and master your delivery routes today! 🚚🌟</p>  
+                    <p> Inquiries? Our expert team is eager to assist you in enhancing your route planning and exceeding your customers' expectations! 🤝🚀</p>
+                </div>
+            </section>
+            <div id="row2">
+                <div class="route-programming-image">
+                    <img src="{{ url_for('static', path='route-programming.png') }}" alt="Route Programming Image">
+                </div>
+                <form id="route-form" method="post" action="/api/route-programming">
+                    <label for="order-id">Order ID:</label>
+                    <input type="text" id="order-id" name="order-id">
+                    <label for="destination">Destination:</label>
+                    <input type="text" id="new-destination" name="new-destination" placeholder="Enter new destination">
+                    <button onclick="updateDestination(event)" type="submit">Update Destination</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        async function updateDestination(event) {
+            event.preventDefault();
+            const orderIdInput = document.getElementById("order-id");
+            const orderId = orderIdInput.value;
+            const newDestinationInput = document.getElementById("new-destination");
+            const newDestination = newDestinationInput.value;
+    
+            try {
+                const response = await fetch(`/api/orders/${orderId}/destination`, {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ "new_destination": newDestination })
+                });
+    
+                if (response.ok) {
+                    const data = await response.json();
+                    alert(`${data.message}`); 
+                    
+                } else {
+                    throw new Error("Error updating destination location");
+                }
+            } catch (error) {
+                console.error("Error updating destination:", error);
+                alert("Error updating destination location. Please, try it later.");
+            }
+        }
+    </script>
+</body>
+</html>

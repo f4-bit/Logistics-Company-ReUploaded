@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet management | Logistics Company</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        
+        /* Header Section */
+
+        header {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header img {
+            height: 100%;
+            width: 20%;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: #000000;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s; 
+        }
+
+        nav ul li a:hover {
+            color: #5551FF;
+        }
+
+        /* Title Section */
+
+        .title {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        hr {
+            margin-top: 10px;
+            color: #E6E6E6;
+            opacity: .7;
+        }
+
+        /* Main Section */
+
+        .container {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            background: #ff0;
+            background: rgba(105, 155, 247, 0.2);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        #row2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        #row2 .tracking-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 50%;
+            margin-bottom: 20px;
+            border-right: 3px solid rgba(105, 155, 247, .2);
+        }
+
+        #row2 > .tracking-image img {
+            height: 20em;
+            width: 20em;
+        }
+
+        #row3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            border-top: 3px solid rgba(105, 155, 247, .2);
+            padding-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        main form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            width: 50%;
+        }
+
+        main label {
+            width: 50%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        main input[type="text"] {
+            width: 75%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        main button[type="submit"] {
+            width: 75%;
+            padding: 10px;
+            background-color: #5551FF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        main button[type="submit"]:hover {
+            background-color: #333199;
+        }
+
+        /* About Section */
+
+        .microservice {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 10px 20px;
+            width: 100%;
+        }
+
+        .microservice-content {
+            flex: 1;
+            padding-right: 40px;
+            padding-left: 50px;
+            margin-right: 50px;
+            width: 100%;
+        }
+        
+        .microservice-content h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .microservice-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .microservice-content ul{
+            font-size: 18px;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', path='logo.png') }}" alt="Logistics Company Logo">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li> 
+                <li><a id="services" href="/services">Services</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="title">
+            <h1>Fleet Management</h1>
+            <hr>
+        </div>
+        <div class="container">
+            <section class="microservice">
+                <div class="microservice-content">
+                    <h2>🚀 Unlock Efficiency with Our Fleet Management Microservice!</h2>
+                    <ul>
+                        <li>Scalability: Whether you have 10 vehicles or 10,000, our microservice grows with you. No limitations!</li>
+                        <li>Real-Time Insights: Monitor vehicle locations, fuel consumption, and maintenance schedules in real time.</li>
+                        <li>Predictive Maintenance: Say goodbye to breakdowns. Our microservice predicts maintenance needs.</li>
+                        <li>Route Optimization: Minimize fuel costs and improve delivery accuracy.</li>
+                        <li>Cost Savings: Streamline processes and save money.</li>
+                    </ul>
+                    <p>Customer Testimonial: “Since adopting this microservice, our fleet downtime has decreased by 30%. It’s a game-changer!” — Happy Fleet Manager</p>
+                    <p>Upgrade to our Fleet Management Microservice today and drive your business forward! 🚗🌟</p>
+                </div>
+            </section>
+            <div id="row2">
+                <div class="tracking-image">
+                    <img src="{{ url_for('static', path='fleet_management2.png') }}" alt="Fleet Management Image">
+                </div>
+                <form id="fleet-form" method="post" action="/api/fleet-management">
+                    <label for="fleet-id">Fleet ID:</label>
+                    <input type="text" id="fleet-id" name="fleet-id">
+                    <button onclick="manageFleet(event)" type="submit">Manage Fleet</button>
+                </form>
+            </div>
+            <div id="row3"> 
+                <div id="fleet-info"></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        async function showFleetInfo(fleetData) {
+        const fleetInfoDiv = document.getElementById("fleet-info");
+        fleetInfoDiv.innerHTML = `
+            <h2>Fleet Information</h2>
+            <p>Fleet ID: ${fleetData.fleet_id}</p>
+            <p>Pleet Plates: ${fleetData.fleetplates}</p>
+        `;
+        }
+
+        async function manageFleet(event) {
+            event.preventDefault();
+            const fleetIdInput = document.getElementById("fleet-id");
+            const fleetId = fleetIdInput.value;
+
+            try {
+                const response = await fetch(`/api/fleet-management/${fleetId}`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+
+                console.log(response);
+
+                if (response.ok) {
+                    const data = await response.json();
+                    showFleetInfo(data);
+                } else {
+                    throw new Error("Error obtaining order information");
+                }
+                console.log(response);
+            } catch (error) {
+                console.error("Error managing fleet:", error);
+                alert("Error obtaining fleet information. Please, try it later.");
+            }
+        }
+    </script>
+</body>
+</html>
